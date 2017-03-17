@@ -1,0 +1,26 @@
+<section id="CobrancaForm">
+<div class="row">
+<div class="col-md-12">
+			<div class="form-group col-md-2">
+				<label> Despesa </label>
+		    	<select data-bind="options: despesasDisponiveis, 
+		    			optionsText: 'nome',
+		    			value: despesaSelecionada,
+		    			optionsCaption: 'Escolha a despesa'"/>
+		    </div>
+		    <div class="form-group col-md-2">
+				<label> Valor </label>
+				<input type='text' pattern='\d+(\.)\d{2}' data-bind="value: valor"/>
+		    </div>
+		    <button class="btn btn-default" data-bind="click: geraCobranca"> Criar </button>
+</div>
+</div>
+</section>
+
+<section id='MesCobrancaView'>
+
+<section id="CobrancaView"></section>
+
+
+<div data-bind="component: {name : 'pie-chart', params: {cobrancas: cobrancas}}"></div>
+</section>
